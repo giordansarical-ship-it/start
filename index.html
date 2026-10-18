@@ -4,7 +4,7 @@
     <title>Java & HTML Connection</title>
 </head>
 <body>
-    <h1 id="output">test test.</h1>
+    <h1 id="output">test te\st.</h1>
 
     <script>
         const { exec } = require('child_process');
@@ -17,7 +17,7 @@ exec('ApartmentManagementSystem.java', (compileError, stdout, stderr) => {
     }
 
     // 2. Run the compiled Java class
-    exec('java MyProgram', (runError, stdout, stderr) => {
+    exec('ApartmentManagementSystem.java', (runError, stdout, stderr) => {
         if (runError) {
             console.error(`Runtime Error: ${runError.message}`);
             return;
