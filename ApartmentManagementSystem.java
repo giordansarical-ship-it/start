@@ -25,7 +25,7 @@ public class ApartmentManagementSystem extends JFrame {
     //  DATABASE LAYER  (all SQL lives here)
     // =====================================================================
     static class Database {
-        static final String URL = "jdbc:sqlite:apartment.db";
+        static final String URL = "index.html";
 
         static Connection connect() throws SQLException {
             return DriverManager.getConnection(URL);
