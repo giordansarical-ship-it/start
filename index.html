@@ -8,7 +8,8 @@
 
     <script>
         // Fetch data from the Java backend server
-        fetch('http://ApartmentManagementSystem')
+        let file = "ApartmentManagementSystem.java"
+        fetch (file)
             .then(response => response.json())
             .then(data => {
                 // Update the HTML element with the Java response
