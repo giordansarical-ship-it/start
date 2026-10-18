@@ -1,1 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Java & HTML Connection</title>
+</head>
+<body>
+    <h1 id="output">Loading data...</h1>
 
+    <script>
+        // Fetch data from the Java backend server
+        fetch('http://ApartmentManagementSystem.java')
+            .then(response => response.json())
+            .then(data => {
+                // Update the HTML element with the Java response
+                document.getElementById('output').innerText = data.message;
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
