@@ -7,23 +7,18 @@
     <h1 id="output">test te\st.</h1>
 
     <script>
-        const { exec } = require('child_process');
-
-// 1. Compile the Java file (if not already compiled)
-exec('ApartmentManagementSystem.java', (compileError, stdout, stderr) => {
-    if (compileError) {
-        console.error(`Compilation Error: ${compileError.message}`);
-        return;
-    }
-
-    // 2. Run the compiled Java class
-    exec('ApartmentManagementSystem.java', (runError, stdout, stderr) => {
-        if (runError) {
-            console.error(`Runtime Error: ${runError.message}`);
-            return;
+       $.ajax({    
+        type: 'POST',                 
+        url: 'http://localhost:8080/ApartmentManagementSystem',
+        data: JSON.stringify({"string" : "anything you want to send to your method"}),
+        contentType: "application/json",
+        error: function() {
+            alert("Failed");
+        },
+        success: function() {
+            alert("Success");
         }
-        
-        console.log(`Java Output:\n${stdout}`);
+    });
     });
 });
     </script>
